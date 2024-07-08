@@ -1,6 +1,7 @@
 <template>
     <div>
-        <p class="pt-36">Hello hahu jobs</p>
+        <h1>This is the header for every page</h1>
+        <slot></slot>
     </div>
 </template>
 

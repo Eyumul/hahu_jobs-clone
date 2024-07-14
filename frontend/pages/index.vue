@@ -148,39 +148,7 @@
                 </div>
             </div>
         </div>
-        <div class="bg-white flex flex-col px-[8%] pt-24 items-center space-y-4">
-            <div class="flex">
-                <div class="w-[25%] flex space-x-24">
-                    <div class="flex flex-col">
-                        <p class="font-bold text-xl text-[#465061] underline pb-3">Get Started</p>
-                        <p class="text-lg font-semibold text-[#465061]">Sign up</p>
-                        <p class="text-lg font-semibold text-[#465061]">Login</p>
-                    </div>
-                    <div class="flex flex-col">
-                        <p class="font-bold text-xl text-[#465061] underline pb-3">Quick links</p>
-                        <p class="text-lg font-semibold text-[#465061]">HahuJobs IO</p>
-                        <p class="text-lg font-semibold text-[#465061]">Minab Tech</p>
-                    </div>
-                </div>
-                <div class="flex flex-col w-[45%]">
-                    
-                    <p class="text-lg font-semibold text-[#465061]">HaHuJobs is a cloud based product owned and manged by a technology consulting firm called Minab IT solutions PLC. Minab was founded in 2014 and has an extensive experience in software development for the past nine years.</p>
-                </div>
-            </div>
-            <div class="h-[1px] w-full bg-[#465061]"></div>
-            <div class="py-8 flex items-center w-full justify-between">
-                <div class="flex space-x-12 text-lg text-[#cccfd4] font-semibold">
-                    <p>Privacy policy</p>
-                    <p>© 2020 - 2024 HaHuJobs. All rights reserved.</p>
-                </div>
-                <div class="flex space-x-9 pt-4">
-                        <NuxtImg class="hover:size-[30px] size-[25px]" src="telegram.svg"/>
-                        <NuxtImg class="hover:size-[30px] size-[25px]" src="facebook-circular.svg"/>
-                        <NuxtImg class="hover:size-[30px] size-[25px]" src="x.svg"/>
-                        <NuxtImg class="hover:size-[30px] size-[25px]" src="linkedin_color.svg"/>
-                </div>
-            </div>
-        </div>
+        <pageFooter/>
     </div>
 </template>
 
@@ -193,5 +161,20 @@
     background-image: url('../public/bg_dots.png');
     width: 100%;
     height: 324px;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 2px;
+  background: white;
+} 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #009688; 
+  border-radius: 1px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #80cbc4; 
 }
 </style>

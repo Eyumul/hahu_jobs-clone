@@ -1,5 +1,5 @@
 <template>
-    <div class="">
+    <div class="h-screen bg-[#f1f1f1] flex flex-col justify-between font-sans">
         <div class="fixed w-full bg-[#f1f1f1] backdrop-filter backdrop-blur bg-opacity-50">
             <div class="flex justify-between h-[75px] mx-[3%] ">
                 <div class="self-center">
@@ -11,10 +11,10 @@
                     </NuxtLink>
                 </div>
                 <div class="flex space-x-10 text-lg text-[#444f60] items-end self-center">
-                    <NuxtLink to="./" :class="{'text-[#009688] font-bold' : currentPath == '/', 'hover:text-[#009688] hover:text-xl cursor-pointer' : currentPath != '/'}">Home</NuxtLink>
-                    <NuxtLink to="./#about" :class="{'text-[#009688] font-bold' : currentPath == '/#about', 'hover:text-[#009688] hover:text-xl cursor-pointer' : currentPath != '/#about'}">About</NuxtLink>
-                    <div label="Open" @click="isOpen = true" class="hover:text-[#009688] hover:text-xl cursor-pointer">Jobs</div>
-                    <NuxtLink to="./#postVacancy" :class="{'text-[#009688] font-bold' : currentPath == '/#postVacancy', 'hover:text-[#009688] hover:text-xl cursor-pointer' : currentPath != '/#postVacancy'}">Post Vacancy</NuxtLink>
+                    <NuxtLink to="./" class="hover:text-[#009688] hover:text-xl cursor-pointer">Home</NuxtLink>
+                    <NuxtLink to="./#about" class="hover:text-[#009688] hover:text-xl cursor-pointer">About</NuxtLink>
+                    <NuxtLink to="./jobs" class="text-[#009688] font-bold cursor-pointer">Jobs</NuxtLink>
+                    <NuxtLink to="./#postVacancy" class="hover:text-[#009688] hover:text-xl cursor-pointer">Post Vacancy</NuxtLink>
                     <NuxtLink class="hover:text-[#009688] hover:text-xl cursor-pointer">Contact</NuxtLink>
                     <NuxtLink class="mb-[1px]">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="cursor-pointer hover:text-prime size-5 mb-[2px]">
@@ -28,64 +28,88 @@
                     </div>
                 </div> 
             </div>
-            <UModal v-model="isOpen" :ui="{strategy: 'override',width:'w-[92%]',height:'h-[800px]',background:'bg-white'}" prevent-close>
-                 <div class="flex flex-col text-[#444f60] p-8">
-                    <div class="flex justify-between mb-4">
-                        <div class="flex items-center space-x-8">
-                            <div  @click="isOpen = false" class="cursor-pointer hover:bg-[#bde4e0] p-2 rounded-lg">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-                                </svg>
-                            </div>
-                            <p class="text-[20px] font-bold">Job by sector</p>
-                        </div>
-                        <NuxtLink to="./jobs" @click="isOpen = false">
-                            <OutlineButton buttonName="View All">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
-                                </svg>
-                            </OutlineButton>
-                        </NuxtLink>
-                    </div>
-                    <div class="grid grid-rows-4 grid-cols-4">
-                        <JobSectorCard vectorSource="natural-science.svg" sector="Natural Science" openPositionCounts="28" sectorDescription="Natural science concerned with the description, prediction, and unde..."/>
-                        <JobSectorCard vectorSource="hospitality.svg" sector="Hospitality" openPositionCounts="16" sectorDescription="Operations of hotels, restaurants, cruise ships, amusement parks, de..."/>
-                        <JobSectorCard vectorSource="finance.svg" sector="Finance" openPositionCounts="150" sectorDescription="General management principles to financial resources of the enterpri..."/>
-                        <JobSectorCard vectorSource="manufacturing.svg" sector="Manufacturing" openPositionCounts="3" sectorDescription="Manufacturing is a production sector for all products. This sector c..."/>
-                        <JobSectorCard vectorSource="business.svg" sector="Business" openPositionCounts="292" sectorDescription="Aspects of overseeing and supervising business operations. Business ..."/>
-                        <JobSectorCard vectorSource="low-and-medium-skilled-work.svg" sector="Low and Medium Skilled..." openPositionCounts="19" sectorDescription="Does not require completing a college degree or specialized training..."/>
-                        <JobSectorCard vectorSource="legal-service.svg" sector="Legal Services" openPositionCounts="5" sectorDescription="services involving legal or law related matters like issue of legal ..."/>
-                        <JobSectorCard vectorSource="social-science.svg" sector="Social Science" openPositionCounts="94" sectorDescription="Social science focus on the study of society and the relationship am..."/>
-                        <JobSectorCard vectorSource="creative-art.svg" sector="Creative Art" openPositionCounts="24" sectorDescription="Human creative skill and imagination, typically in a visual form suc..."/>
-                        <JobSectorCard vectorSource="transport-and-logistics.svg" sector="Transportaion & Logistics" openPositionCounts="24" sectorDescription="involves both internal and external distribution networks which incl..."/>
-                        <JobSectorCard vectorSource="ict.svg" sector="ICT" openPositionCounts="39" sectorDescription="ICT sector professionals conduct research, plan, design, support ana..."/>
-                        <NuxtImg class="row-span-2 w-[350px] h-[300px] self-center" src="mascot-half.svg"/>
-                        <JobSectorCard vectorSource="education.svg" sector="Education" openPositionCounts="35" sectorDescription="Education is about teaching, learning skills and knowledge. The Educ..."/>
-                        <JobSectorCard vectorSource="engineering.svg" sector="Engineering" openPositionCounts="87" sectorDescription="Engineering sector is a career that brings together the technologica..."/>
-                        <JobSectorCard vectorSource="health-care.svg" sector="Health Care" openPositionCounts="56" sectorDescription="Health care enchance quality of life by enhancing health promotion, d..."/>
-                    </div>
-                    <div class="w-full flex flex-col items-end space-y-1">
-                        <p class="text-[#444f60] text-xs text-right px-12">Powered by</p>
-                        <NuxtImg class="w-[4.8%]" src="Hahu_logo_footer.png"/>
-                    </div>
-                 </div>
-            </UModal>
         </div>
-        <slot></slot>
+        <div class="flex bg-[#f1f1f1] space-x-2  pt-[7rem] pb-[5rem]">
+            <div class="flex flex-col pl-[3%] bg-[#f1f1f1] w-[17%] ">
+                <div @click="drop = !drop" class="flex justify-between items-center text-second cursor-pointer space-x-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true" class="w-5 md:w-6 text-secondary dark:text-secondary-8"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path></svg>
+                    <p class="text-xl font-bold text-second">Additional Filters</p>
+                    <svg v-if="!drop" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="text-prime size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                    </svg>
+                    <svg v-else xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="text-prime size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" />
+                    </svg>
+                </div>
+                <div v-if="drop">
+                    <div class="bg-second-light h-[1px] m-4"></div>
+                    <div>
+                        <p class="text-xl mb-4 font-semibold text-black">Type</p>
+                        <div class="flex flex-wrap">
+                            <FilterTypeButton buttonName="Bid"/>
+                            <FilterTypeButton buttonName="Contract"/>
+                            <FilterTypeButton buttonName="Full Time"/>
+                            <FilterTypeButton buttonName="Internship"/>
+                            <FilterTypeButton buttonName="Part Time"/>
+                        </div>
+                    </div>
+                    <div class="bg-second-light h-[1px] m-4"></div>
+                    <div class="mb-2">
+                        <div class="flex items-center space-x-1 mb-4">
+                            <p class="text-xl font-semibold text-black">Regions</p>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="black" class="size-5">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z" />
+                            </svg>
+                        </div>
+                        <HahuEthioMap />
+                    </div>
+                    <div class="flex justify-end">
+                        <div class="flex space-x-2 rounded-lg py-1 px-2 bg-prime text-white font-bold">
+                            <p>Copy Filter</p>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true" class="w-5"><path stroke-linecap="round" stroke-linejoin="round" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"></path></svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-3 mt-4 w-[100%] h-[530px] bg-white rounded-lg flex flex-col">
+                    <p class="text-[18px] font-semibold text-prime self-end">AD</p>
+                    <NuxtImg src="ad.png" class="h-[50%]"/>
+                    <p class="text-[14px] py-4 text-second font-light">Provides human resources and related services starting from job vacancy announcements, recruitment, all the way to human resources management until termination. This deployment also offers unique services to a category of businesses that operate within industry parks, in addition to foreign employment agencies.</p>
+                    <div class="flex self-end"><SmallButton buttonName="Know more"/></div>
+                </div>
+            </div>
+            <div class="flex w-[83%]">
+                <div class="flex space-x-2 pr-16 pl-6 pt-12 pb-8 -mt-12 justify-center w-[83%] fixed bg-[#f1f1f1] backdrop-filter backdrop-blur bg-opacity-50">
+                    <input class="w-[40%] text-second rounded-l-[10px] h-11 pl-12 border-0 ring-1 ring-second-light hover:ring-prime focus:ring-second-light" placeholder="Search" type="text"/>
+                    <select class="w-[20%] text-second h-11 pl-12 border-0 ring-1 ring-second-light hover:ring-prime focus:ring-second-light">
+                        <option value="" selected>Select Position</option>
+                        <option value="option1">Option 1</option>
+                        <option value="option2">Option 2</option>
+                        <option value="option3">Option 3</option>
+                    </select>
+                    <select class="w-[20%] text-second h-11 pl-12 border-0 ring-1 ring-second-light hover:ring-prime focus:ring-second-light">
+                        <option value="" selected>Select Sector</option>
+                        <option value="option1">Option 1</option>
+                        <option value="option2">Option 2</option>
+                        <option value="option3">Option 3</option>
+                    </select>
+                    <select class="w-[20%] text-second rounded-r-[10px] h-11 pl-12 border-0 ring-1 ring-second-light hover:ring-prime focus:ring-second-light">
+                        <option value="" selected>Select City</option>
+                        <option value="option1">Option 1</option>
+                        <option value="option2">Option 2</option>
+                        <option value="option3">Option 3</option>
+                    </select>
+                </div>
+                <div class="w-full pt-[40px]">
+                    <slot></slot>
+                </div>
+            </div>   
+        </div>
+        <PageFooter/>
     </div>
 </template>
 
 <script setup>
-const isOpen = ref(false)
-
-
-const route = useRoute()
-const currentPath = ref(route.fullPath)
-
-// Watch for changes in the route's fullPath, including hash changes
-watchEffect(() => {
-  currentPath.value = route.fullPath
-})
+const drop = ref(true)
 </script>
 
 <style>

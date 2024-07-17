@@ -1,19 +1,17 @@
 <template>
-    <div class="bg-white text-second dark:text-white dark:bg-[#1b2637] flex flex-col px-[8%] pt-24 items-center space-y-4">
-            <div class="flex justify-between items-center">
-                <div class="w-[25%] flex space-x-24">
-                    <div class="flex flex-col">
-                        <p class="font-bold text-xl underline pb-3">Get Started</p>
-                        <p class="text-lg font-semibold ">Sign up</p>
-                        <p class="text-lg font-semibold">Login</p>
-                    </div>
-                    <div class="flex flex-col">
-                        <p class="font-bold text-xl underline pb-3">Quick links</p>
-                        <p class="text-lg font-semibold ">HahuJobs IO</p>
-                        <p class="text-lg font-semibold ">Minab Tech</p>
-                    </div>
+    <div class="bg-white text-second dark:text-white dark:bg-[#1b2637] flex flex-col px-[4%] pt-24 items-center space-y-4">
+            <div class="flex flex-wrap gap-4 justify-between w-full">
+                <div class="flex flex-col">
+                    <p class="font-bold text-xl underline pb-3">Get Started</p>
+                    <p class="text-lg font-semibold ">Sign up</p>
+                    <p class="text-lg font-semibold">Login</p>
                 </div>
-                <div class="flex flex-col gap-2 w-[45%]">
+                <div class="flex flex-col">
+                    <p class="font-bold text-xl underline pb-3">Quick links</p>
+                    <p class="text-lg font-semibold ">HahuJobs IO</p>
+                    <p class="text-lg font-semibold ">Minab Tech</p>
+                </div>
+                <div class="flex items-center sm:items-start flex-col gap-2 w-[500px]">
                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" class="w-[197px] h-[74px]" viewBox="0 0 857.8 331.8" style="enable-background:new 0 0 857.8 331.8;" xml:space="preserve" data-v-f1e280f0=""><title>Minab Logo</title><desc>This is the official logo of Minab IT Solutions</desc><g><g><path class="fill-[#49045D] dark:fill-[#fff]" d="M453.6,176.7h-11.9l-2.2-93.5L420,139.6l-19.2-56.3l-2.5,93.5h-11.8l3.4-112.1l14,0l16.2,47.5l16.1-47.5
 			l14.1,0L453.6,176.7z"></path><path class="fill-[#49045D] dark:fill-[#fff]" d="M541.7,176.7H500v-10.1h15.1V74.7H500V64.6h41.7v10.1h-15.3v91.9h15.3V176.7z"></path><path class="fill-[#49045D] dark:fill-[#fff]" d="M651.8,176.7h-15l-33.6-94.5l-0.3-0.4v94.9h-11.3V64.6l15,0l33.4,94.3l0.4,0.1l0.2-94.4h11.3V176.7z"></path><path class="fill-[#49045D] dark:fill-[#fff]" d="M757.7,175.9l-11,3l-8.9-36.8h-30.5l-8.7,36.8l-11.2-3l28.4-111.3h13.4L757.7,175.9z M735.2,132l-12.5-52.3
 			L709.9,132H735.2z"></path><path class="fill-[#49045D] dark:fill-[#fff]" d="M857.8,143.1c0,11.2-2.6,19.6-7.9,25.2c-5.3,5.6-12,8.4-20.3,8.4h-36.1v-10.1h9.1V74.7h-9.1V64.6h34.3
@@ -50,16 +48,16 @@
                 </div>
             </div>
             <div class="h-[1px] w-full bg-[#465061]"></div>
-            <div class="py-8 flex items-center w-full justify-between">
+            <div class="py-8 flex flex-wrap items-center w-full justify-between">
                 <div class="flex space-x-12 text-lg text-[#cccfd4] font-semibold">
                     <p>Privacy policy</p>
                     <p>© 2020 - 2024 HaHuJobs. All rights reserved.</p>
                 </div>
                 <div class="flex space-x-9 pt-4">
-                        <NuxtImg class="hover:size-[30px] size-[25px]" src="telegram.svg"/>
-                        <NuxtImg class="hover:size-[30px] size-[25px]" src="facebook-circular.svg"/>
-                        <NuxtImg class="hover:size-[30px] size-[25px]" src="x.svg"/>
-                        <NuxtImg class="hover:size-[30px] size-[25px]" src="linkedin_color.svg"/>
+                        <NuxtImg class="hover:size-[30px] duration-200 size-[25px]" src="telegram.svg"/>
+                        <NuxtImg class="hover:size-[30px] duration-200 size-[25px]" src="facebook-circular.svg"/>
+                        <NuxtImg class="hover:size-[30px] duration-200 size-[25px]" src="x.svg"/>
+                        <NuxtImg class="hover:size-[30px] duration-200 size-[25px]" src="linkedin_color.svg"/>
                 </div>
             </div>
         </div>

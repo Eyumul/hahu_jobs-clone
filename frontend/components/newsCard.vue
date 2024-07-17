@@ -1,6 +1,6 @@
 <template>
-    <div class="bg-white m-[2%] flex flex-col justify-between hover:ring-[#009688] hover:ring-1 cursor-pointer w-[480px] h-[700px] rounded-[15px]">
-        <NuxtImg class="h-[50%] rounded-t-[15px]" :src="newsPoster"/>
+    <div class="bg-white m-[1%] flex flex-col justify-between hover:ring-[#009688] hover:ring-1 cursor-pointer w-[450px] rounded-[15px]">
+        <NuxtImg class=" rounded-t-[15px]" :src="newsPoster"/>
         <div class="flex flex-col space-y-4 p-7">
             <div class="flex">
                 <div class="text-center text-black text-xs font-semibold rounded-[20px] bg-[#80cbc4] content-center px-3 pb-1 h-[25px]">{{name}}</div>

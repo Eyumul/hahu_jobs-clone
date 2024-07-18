@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="fixed w-full bg-[#f1f1f1] backdrop-filter backdrop-blur bg-opacity-50">
+        <div class="fixed w-full bg-[#f1f1f1] dark:bg-transparent backdrop-filter backdrop-blur bg-opacity-50">
             <div class="flex items-center justify-between h-[75px] mx-[3%] ">
                     <NuxtLink to="/" class="router-link-active router-link-exact-active flex-shrink-0 flex items-center" aria-current="page">
                         <div class="text-second">
@@ -8,27 +8,35 @@
                             <div class=" dark:text-secondary-8 text-xs ml-0.5 mt-0.5"> Primary </div>
                         </div>
                     </NuxtLink>
-                <div class="hidden md:flex xl:space-x-10 md:space-x-4 xl:text-lg md:text-sm text-[#444f60] items-end self-center">
+                <div class="hidden md:flex xl:space-x-10 md:space-x-4 xl:text-lg md:text-sm text-[#444f60] dark:text-prime-lighter items-end self-center">
                     <NuxtLink to="./" :class="{'text-[#009688] font-bold' : currentPath == '/', 'hover:text-[#009688] hover:text-xl duration-500 cursor-pointer' : currentPath != '/'}">Home</NuxtLink>
                     <NuxtLink to="./#about" :class="{'text-[#009688] font-bold' : currentPath == '/#about', 'hover:text-[#009688] hover:text-xl duration-500 cursor-pointer' : currentPath != '/#about'}">About</NuxtLink>
                     <div label="Open" @click="isOpen = true" class="hover:text-[#009688] hover:text-xl duration-500 cursor-pointer">Jobs</div>
                     <NuxtLink to="./#postVacancy" :class="{'text-[#009688] font-bold' : currentPath == '/#postVacancy', 'hover:text-[#009688] hover:text-xl duration-500 cursor-pointer' : currentPath != '/#postVacancy'}">Post Vacancy</NuxtLink>
                     <NuxtLink class="hover:text-[#009688] hover:text-xl duration-500 cursor-pointer">Contact</NuxtLink>
-                    <NuxtLink class="mb-[1px]">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="cursor-pointer hover:text-prime size-5 mb-[2px]">
+                    <div class="mb-[1px]" @click="toggleColorMode">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="dark:hidden cursor-pointer hover:text-prime size-5 mb-[2px]">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
                         </svg>
-                    </NuxtLink>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true" class="hidden dark:inline cursor-pointer hover:text-prime size-5 mb-[2px]">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                        </svg>
+                    </div>
                     <div class="flex space-x-4">
                         <smallButton buttonName="Login"/> 
-                        <p class="text-[#1b1b1b] text-[11px] font-semibold self-end mb-[1px]">Or</p>
+                        <p class="text-[#1b1b1b] text-[14px] font-semibold dark:text-prime-lighter self-end mb-[1px]">Or</p>
                         <smallButton buttonName="Sign up"/>
                     </div>
                 </div>
                 <div class="md:hidden text-second flex items-center gap-4">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="cursor-pointer hover:text-prime size-5 mb-[2px]">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
-                    </svg>
+                    <div class="mb-[1px]" @click="toggleColorMode">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="dark:hidden cursor-pointer hover:text-prime size-5 mb-[2px]">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true" class="hidden dark:inline cursor-pointer hover:text-prime size-5 mb-[2px]">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                        </svg>
+                    </div>
                     <svg v-if="!menudrop" @click="menudrop = !menudrop" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                     </svg>
@@ -37,7 +45,7 @@
                     </svg>
                 </div>
             </div>
-            <div class="mx-[3%] my-4 flex flex-col text-second gap-6" v-if="menudrop">
+            <div class="mx-[3%] my-4 flex flex-col text-second dark:text-prime-lighter gap-6" v-if="menudrop">
                 <NuxtLink @click="menudrop = false" to="./" :class="{'text-[#009688] font-medium' : currentPath == '/', 'hover:text-[#009688] duration-500 cursor-pointer font-medium' : currentPath != '/'}">Home</NuxtLink>
                 <NuxtLink @click="menudrop = false" to="./#about" :class="{'text-[#009688] font-medium' : currentPath == '/#about', 'cursor-pointer font-medium' : currentPath != '/#about'}">About</NuxtLink>
                 <div label="Open" @click="isOpen = true, menudrop = false" class="cursor-pointer font-medium">Jobs</div>
@@ -47,12 +55,12 @@
                 <NuxtLink @click="menudrop = false" class="cursor-pointer font-medium">Login</NuxtLink>
                 <NuxtLink @click="menudrop = false" class="cursor-pointer font-medium">Sign up</NuxtLink>
             </div>
-            <UModal v-model="isOpen" :ui="{strategy: 'override',width:'w-[92%]',background:'bg-white'}" prevent-close>
-                 <div class="flex flex-col text-[#444f60] p-3 sm:p-6 lg:p-8">
+            <UModal v-model="isOpen" :ui="{strategy: 'override',width:'w-[92%]',background:'bg-white dark:bg-second-dark'}" prevent-close>
+                 <div class="flex flex-col text-[#444f60] dark:text-white p-3 sm:p-6 lg:p-8">
                     <div class="flex justify-between gap-4 mb-4">
                         <div class="flex items-center space-x-8">
                             <div  @click="isOpen = false" class="cursor-pointer hover:bg-[#bde4e0] p-2 rounded-lg">
-                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5 lg:size-6">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="dark:text-second size-5 lg:size-6">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
                                 </svg>
                             </div>
@@ -84,7 +92,7 @@
                         <JobSectorCard vectorSource="health-care.svg" sector="Health Care" openPositionCounts="56" sectorDescription="Health care enchance quality of life by enhancing health promotion, d..."/>
                     </div>
                     <div class="w-full flex flex-col items-end space-y-1">
-                        <p class="text-[#444f60] text-xs text-right px-12">Powered by</p>
+                        <p class="text-[#444f60] dark:text-white text-xs text-right px-12">Powered by</p>
                         <NuxtImg class="w-24 pl-6" src="Hahu_logo_footer.png"/>
                     </div>
                  </div>
@@ -97,7 +105,18 @@
 <script setup>
 const isOpen = ref(false)
 const menudrop = ref(false)
-
+const colorMode = useColorMode()
+if(import.meta.client){
+    localStorage.removeItem('nuxt-color-mode');
+}
+function toggleColorMode() {
+    if(localStorage.getItem('colorMode') == 'light'){
+        localStorage.setItem("colorMode", "dark")
+    } else {
+        localStorage.setItem("colorMode", "light")
+    }
+    colorMode.preference = localStorage.getItem("colorMode")
+}
 const route = useRoute()
 const currentPath = ref(route.fullPath)
 

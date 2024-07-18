@@ -1,6 +1,6 @@
 <template>
     <div class="h-screen bg-[#f1f1f1] flex flex-col justify-between font-sans">
-        <div class="fixed z-10 w-full bg-[#f1f1f1] backdrop-filter backdrop-blur bg-opacity-50">
+        <div class="fixed z-10 w-full bg-[#f1f1f1] dark:bg-transparent backdrop-filter backdrop-blur bg-opacity-50">
             <div class="flex items-center justify-between h-[75px] mx-[3%] ">
                     <NuxtLink to="/" class="router-link-active router-link-exact-active flex-shrink-0 flex items-center" aria-current="page">
                         <div class="text-second">
@@ -8,27 +8,35 @@
                             <div class=" dark:text-secondary-8 text-xs ml-0.5 mt-0.5"> Primary </div>
                         </div>
                     </NuxtLink>
-                <div class="hidden md:flex xl:space-x-10 md:space-x-4 xl:text-lg md:text-sm text-[#444f60] items-end self-center">
+                <div class="hidden md:flex xl:space-x-10 md:space-x-4 xl:text-lg md:text-sm text-[#444f60] dark:text-prime-lighter items-end self-center">
                     <NuxtLink to="./" class="hover:text-[#009688] hover:text-xl duration-500 cursor-pointer">Home</NuxtLink>
                     <NuxtLink to="./#about" class="hover:text-[#009688] hover:text-xl duration-500 cursor-pointer">About</NuxtLink>
                     <NuxtLink to="./jobs" class="text-[#009688] font-bold cursor-pointer">Jobs</NuxtLink>
                     <NuxtLink to="./#postVacancy" class="hover:text-[#009688] hover:text-xl duration-500 cursor-pointer">Post Vacancy</NuxtLink>
                     <NuxtLink class="hover:text-[#009688] hover:text-xl duration-500 cursor-pointer">Contact</NuxtLink>
-                    <NuxtLink class="mb-[1px]">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="cursor-pointer hover:text-prime size-5 mb-[2px]">
+                    <div class="mb-[1px]" @click="toggleColorMode">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="dark:hidden cursor-pointer hover:text-prime size-5 mb-[2px]">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
                         </svg>
-                    </NuxtLink>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true" class="hidden dark:inline cursor-pointer hover:text-prime size-5 mb-[2px]">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                        </svg>
+                    </div>
                     <div class="flex space-x-4">
                         <smallButton buttonName="Login"/> 
-                        <p class="text-[#1b1b1b] text-[11px] font-semibold self-end mb-[1px]">Or</p>
+                        <p class="text-[#1b1b1b] dark:text-prime-lighter text-[11px] font-semibold self-end mb-[1px]">Or</p>
                         <smallButton buttonName="Sign up"/>
                     </div>
                 </div>
                 <div class="md:hidden text-second flex items-center gap-4">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="cursor-pointer hover:text-prime size-5 mb-[2px]">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
-                    </svg>
+                    <div class="mb-[1px]" @click="toggleColorMode">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="dark:hidden cursor-pointer hover:text-prime size-5 mb-[2px]">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true" class="hidden dark:inline cursor-pointer hover:text-prime size-5 mb-[2px]">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                        </svg>
+                    </div>
                     <svg v-if="!menudrop" @click="menudrop = !menudrop" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                     </svg>
@@ -48,11 +56,11 @@
                 <NuxtLink @click="menudrop = false" class="cursor-pointer font-medium">Sign up</NuxtLink>
             </div>
         </div>
-        <div class="md:flex bg-[#f1f1f1] space-x-2  pt-[73px] pb-[5rem]">
-            <div class="flex flex-col px-[4%] bg-[#f1f1f1] w-full md:w-[25%] ">
-                <div @click="drop = !drop" class="flex justify-between gap-2 items-center text-second cursor-pointer">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true" class="w-5 md:w-6 text-secondary dark:text-secondary-8"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path></svg>
-                    <p class="text-xs md:text-sm lg:text-lg xl:text-xl text-center font-bold text-second">Additional Filters</p>
+        <div class="md:flex bg-[#f1f1f1] dark:bg-second-darker space-x-2  pt-[73px] pb-[5rem]">
+            <div class="flex flex-col px-[4%] bg-[#f1f1f1] dark:bg-second-darker w-full md:w-[25%] ">
+                <div @click="drop = !drop" class="flex justify-between gap-2 items-center text-second dark:text-white cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true" class="w-5 md:w-6"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path></svg>
+                    <p class="text-xs md:text-sm lg:text-lg xl:text-xl text-center font-bold">Additional Filters</p>
                     <svg v-if="!drop" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="text-prime size-6">
                         <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
                     </svg>
@@ -61,7 +69,7 @@
                     </svg>
                 </div>
                 <div v-if="drop">
-                    <div class="bg-second-light h-[1px] m-4"></div>
+                    <div class="bg-second-light dark:bg-[#203c39] h-[1px] m-4"></div>
                     <div>
                         <p class="text-xl mb-4 font-semibold text-black">Type</p>
                         <div class="flex flex-wrap">
@@ -72,7 +80,7 @@
                             <FilterTypeButton buttonName="Part Time"/>
                         </div>
                     </div>
-                    <div class="bg-second-light h-[1px] m-4"></div>
+                    <div class="bg-second-light h-[1px] dark:bg-[#203c39] m-4"></div>
                     <div class="mb-2">
                         <div class="flex items-center space-x-1 mb-4">
                             <p class="text-xl font-semibold text-black">Regions</p>
@@ -89,29 +97,29 @@
                         </div>
                     </div>
                 </div>
-                <div class="p-3 mt-4 w-[100%] bg-white rounded-lg flex flex-col">
+                <div class="p-3 mt-4 w-[100%] bg-white dark:bg-second-dark rounded-lg flex flex-col">
                     <p class="text-base sm:text-lg lg:text-xl font-semibold text-prime self-end">AD</p>
                     <NuxtImg src="ad.png" class="h-[50%]"/>
-                    <p class="text-xs sm:text-sm lg:text-base py-4 text-second font-light">Provides human resources and related services starting from job vacancy announcements, recruitment, all the way to human resources management until termination. This deployment also offers unique services to a category of businesses that operate within industry parks, in addition to foreign employment agencies.</p>
+                    <p class="text-xs sm:text-sm lg:text-base py-4 text-second dark:text-second-light font-light">Provides human resources and related services starting from job vacancy announcements, recruitment, all the way to human resources management until termination. This deployment also offers unique services to a category of businesses that operate within industry parks, in addition to foreign employment agencies.</p>
                     <div class="flex self-end"><SmallButton class="text-xs" buttonName="Know more"/></div>
                 </div>
             </div>
             <div class="md:w-full">
-                <div class="hidden z-10 md:grid grid-cols-5 gap-1 xl:gap-3 pl-1 pr-2 xl:pr-12 pt-12 pb-8 sticky w-full top-[74px] bg-[#f1f1f1] backdrop-filter backdrop-blur bg-opacity-50">
-                    <input class="col-span-2 text-second rounded-l-[10px] h-11 text-xs lg:text-sm xl:text-base pl-4 xl:pl-12 border-0 ring-1 ring-second-light hover:ring-prime focus:ring-second-light" placeholder="Search" type="text"/>
-                    <select class="text-second h-11 text-xs lg:text-sm xl:text-base pl-4 xl:pl-12 border-0 ring-1 ring-second-light hover:ring-prime focus:ring-second-light">
+                <div class="hidden z-10 md:grid grid-cols-5 gap-1 xl:gap-3 pl-1 pr-2 xl:pr-12 pt-12 pb-8 sticky w-full top-[74px] dark:bg-transparent bg-[#f1f1f1] backdrop-filter backdrop-blur bg-opacity-50">
+                    <input class="col-span-2 dark:bg-second dark:ring-0 focus:dark:ring-0 dark:text-white text-second rounded-l-[10px] h-11 text-xs lg:text-sm xl:text-base pl-4 xl:pl-12 border-0 ring-1 ring-second-light hover:ring-prime focus:ring-second-light" placeholder="Search" type="text"/>
+                    <select class="text-second dark:bg-second dark:ring-0 focus:dark:ring-0 dark:text-white h-11 text-xs lg:text-sm xl:text-base pl-4 xl:pl-12 border-0 ring-1 ring-second-light hover:ring-prime focus:ring-second-light">
                         <option value="" selected>Select Position</option>
                         <option value="option1">Option 1</option>
                         <option value="option2">Option 2</option>
                         <option value="option3">Option 3</option>
                     </select>
-                    <select class="text-second h-11 text-xs lg:text-sm xl:text-base pl-4 xl:pl-12 border-0 ring-1 ring-second-light hover:ring-prime focus:ring-second-light">
+                    <select class="text-second dark:bg-second dark:ring-0 focus:dark:ring-0 dark:text-white h-11 text-xs lg:text-sm xl:text-base pl-4 xl:pl-12 border-0 ring-1 ring-second-light hover:ring-prime focus:ring-second-light">
                         <option value="" selected>Select Sector</option>
                         <option value="option1">Option 1</option>
                         <option value="option2">Option 2</option>
                         <option value="option3">Option 3</option>
                     </select>
-                    <select class="text-second rounded-r-[10px] h-11 text-xs lg:text-sm xl:text-base pl-4 xl:pl-12 border-0 ring-1 ring-second-light hover:ring-prime focus:ring-second-light">
+                    <select class="text-second dark:bg-second dark:ring-0 focus:dark:ring-0 dark:text-white rounded-r-[10px] h-11 text-xs lg:text-sm xl:text-base pl-4 xl:pl-12 border-0 ring-1 ring-second-light hover:ring-prime focus:ring-second-light">
                         <option value="" selected>Select City</option>
                         <option value="option1">Option 1</option>
                         <option value="option2">Option 2</option>
@@ -130,6 +138,18 @@
 <script setup>
 const drop = ref(true)
 const menudrop = ref(false)
+const colorMode = useColorMode()
+if(import.meta.client){
+    localStorage.removeItem('nuxt-color-mode');
+}
+function toggleColorMode() {
+    if(localStorage.getItem('colorMode') == 'light'){
+        localStorage.setItem("colorMode", "dark")
+    } else {
+        localStorage.setItem("colorMode", "light")
+    }
+    colorMode.preference = localStorage.getItem("colorMode")
+}
 </script>
 
 <style>

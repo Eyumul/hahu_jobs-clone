@@ -1,6 +1,6 @@
 <template>
     <div class="flex flex-col my-6 gap-10">
-        <div class="mt-6 mb-10 border-[1px] border-secondary-6/50 rounded-xl py-5 px-2 md:p-5 text-secondary dark:text-secondary-8">
+        <div class="mt-6 mb-10 border-[1px] border-secondary-6/50 dark:border-second rounded-xl py-5 px-2 md:p-5 text-secondary dark:text-white">
             <div class="flex w-full justify-between text-center items-center">
                 <p class="box-title text-xs md:text-base text-left"> Vacancy match with ESCO </p>
                 <div class="flex flex-wrap justify-end align-middle gap-x-1 md:mb-4 items-center" >
@@ -23,9 +23,8 @@
                             <p class="box-title">Knowledge</p>
                         </div>
                         <div class="mt-4">
-                            <div role="tablist" aria-orientation="horizontal" class="flex justify-start gap-3 md:gap-10 border-b-2 border-b-secondary-7 dark:border-b-secondary">
-                                <button class="py-2.5 text-sm md:text-base font-medium leading-5 w-24 md:w-28 focus:outline-none text-primary-3 border-b-2 border-b-primary-3" id="headlessui-tabs-tab-38" role="tab" aria-selected="true" tabindex="0" data-headlessui-state="selected" type="button" aria-controls="headlessui-tabs-panel-40"> Essential </button>
-                                <button class="py-2.5 text-sm md:text-base font-medium leading-5 w-28 focus:outline-none text-secondary-5 dark:text-secondary-8 hover:cursor-pointer" id="headlessui-tabs-tab-39" role="tab" aria-selected="false" tabindex="-1" data-headlessui-state=""  type="button"> Optional </button>
+                            <div role="tablist" aria-orientation="horizontal" class="flex dark:bg-second-dark justify-start gap-3 md:gap-10">
+                                <button class="py-2.5 text-sm md:text-base font-medium leading-5 w-24 md:w-28 focus:outline-none text-primary-3" id="headlessui-tabs-tab-38" role="tab" aria-selected="true" tabindex="0" data-headlessui-state="selected" type="button" aria-controls="headlessui-tabs-panel-40"> Essential </button>
                             </div>
                             <div class="mt-2 text-sm md:text-base font-thin leading-loose md:leadibase-7">
                                 <div id="headlessui-tabs-panel-40" role="tabpanel" aria-labelledby="headlessui-tabs-tab-38" tabindex="0" data-headlessui-state="selected" class="w-full">
@@ -147,15 +146,15 @@
     @apply text-xs sm:text-base
 }
 .box-shadow{
-    @apply shadow-xl rounded-xl border-[1px] mt-4 border-second-lighter
+    @apply shadow-xl rounded-xl border-[1px] mt-4 border-second-lighter dark:border-second
 }
 .structure-box{
-    @apply bg-second-lighter flex items-center gap-4 p-4 rounded-lg
+    @apply bg-second-lighter flex items-center gap-4 p-4 rounded-lg dark:bg-second
 }
 .structure-code{
     @apply bg-prime py-2 px-4 h-min flex justify-center text-white text-xs sm:text-sm md:text-base
 }
 .structure-title{
-    @apply text-black text-xs sm:text-sm md:text-base
+    @apply text-black text-xs sm:text-sm md:text-base dark:text-white
 }
 </style>

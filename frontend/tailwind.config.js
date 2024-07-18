@@ -1,4 +1,7 @@
+import { darkMode } from '#tailwind-config';
+
 module.exports = {
+  darkMode: 'selector',
     theme: {
       extend: {
         fontFamily: {
@@ -7,6 +10,7 @@ module.exports = {
         colors: {
         prime: {
           light: '#80cbc4',
+          lighter: '#e2f2f0',
           DEFAULT: '#009688',
           dark: '#077069',
         },
@@ -14,7 +18,8 @@ module.exports = {
           lighter: '#f1f1f1',
           light: '#d0d0d0',
           DEFAULT: '#444f60',
-          dark: 'black',
+          dark: '#1b2637',
+          darker: '#02201d',
         }
       }
       },

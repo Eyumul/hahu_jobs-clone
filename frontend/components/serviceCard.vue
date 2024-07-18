@@ -1,8 +1,8 @@
 <template>
-    <div class="bg-white p-7 m-[2%] w-[420px] flex flex-col justify-center hover:ring-[#009688] hover:ring-1 cursor-pointer gap-2 rounded-[10px]">
+    <div class="bg-white dark:bg-second-dark p-7 m-[2%] w-[420px] flex flex-col justify-center hover:ring-[#009688] hover:ring-1 cursor-pointer gap-2 rounded-[10px]">
         <NuxtImg :src="serviceVector" class="self-center w-[280px] h-[280px]"/>
-        <p class="mt-8 text-black text-xl font-black">{{ service }}</p>
-        <p class="mt-3 text-[#566a88] text-base font-thin">{{ serviceDescription }}</p>
+        <p class="mt-8 text-black dark:text-white text-xl font-black">{{ service }}</p>
+        <p class="mt-3 text-[#566a88] dark:text-white text-base font-thin">{{ serviceDescription }}</p>
         <Nuxtlink class=" text-[#009688] font-semibold flex items-center space-x-2 self-end mr-2">
             <p>Explore More</p>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-4">

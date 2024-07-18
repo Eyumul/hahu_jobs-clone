@@ -1,7 +1,7 @@
 <template>
-    <div class="bg-[#f1f1f1]">
-        <div class="bg-[#f1f1f1] w-full flex flex-col">
-            <p class="font-body font-black ml-2 mt-4 text-sm xl:text-xl text-second dark:text-primary-dark-2 mb-4"> Showing 31 of 31 posts </p>
+    <div class="bg-[#f1f1f1] dark:bg-second-darker">
+        <div class="bg-[#f1f1f1] dark:bg-second-darker w-full flex flex-col">
+            <p class="font-body font-black ml-2 mt-4 text-sm xl:text-xl text-second dark:text-white mb-4"> Showing 31 of 31 posts </p>
             <div class="grid grid-cols-1 ml-2 md:grid-cols-2 lg:grid-cols-3 gap-[12px] pr-4">
                 <NuxtLink to="./jobOne">
                     <jobCard timeLeft="3 Day Left" jobTitle="Purchaser" sectorvector="business.svg" sector="Business" subsector="Purchasing & Supply Management" location="Addis Ababa" year="3 years" position="1" companyLogo="company_three_logo.png" companyName="KK PLC" personTime="Full time" jobDescripton="Bachelor's Degree in Purchasing Management, Procurement and Supply Management, or in a related field of study with relevant work experience Duties &..." view="2"></jobCard>

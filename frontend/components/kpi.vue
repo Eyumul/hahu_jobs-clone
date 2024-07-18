@@ -130,8 +130,8 @@
             </div>
         </div>
         <div class="mt-14">
-            <p class="font-black sm:font-semibold text-xs sm:text-base mb-6 dark:text-secondary-8">Summary:</p>
-                <div class="flex space-x-24 sm:space-x-48 border-b-[1px] border-second-light">
+            <p class="font-black sm:font-semibold text-xs sm:text-base mb-6 dark:text-white">Summary:</p>
+                <div class="flex space-x-24 sm:space-x-48 border-b-[1px] border-second-light dark:border-[#353f4e]">
                     <div @click="selectedLanguage = 'English'" :class="{'border-b-[1px] border-prime text-prime' : selectedLanguage == 'English',' cursor-pointer text-sm sm:text-lg  py-4 w-[70px] sm:w-[12%]' : true}">
                         <p class="text-center">English</p>
                     </div>
@@ -139,7 +139,7 @@
                         <p class="text-center"> አማርኛ </p>
                     </div>
                 </div>
-            <div v-if="selectedLanguage == 'English'" class="mt-2 pt-4 text-sm 2xl:text-lg font-thin text-secondary dark:text-primary-dark-2 leading-loose 2xl:leading-7">
+            <div v-if="selectedLanguage == 'English'" class="mt-2 pt-4 text-sm 2xl:text-lg font-thin text-second dark:text-second-light leading-loose 2xl:leading-7">
                 <div id="headlessui-tabs-panel-48" role="tabpanel" aria-labelledby="headlessui-tabs-tab-46" tabindex="0" data-headlessui-state="selected" class="w-full">
                     <p>BA Degree in Business, Supply Chain Management, or in a related field with relevant work experience</p>
                 </div>
@@ -158,12 +158,12 @@ const selectedLanguage = ref("English")
 
 <style scoped>
 .about-info-title{
-    @apply text-[#4c5767] font-[900] text-xs sm:text-base sm:font-[700]
+    @apply text-[#4c5767] font-[900] text-xs sm:text-base sm:font-[700] dark:text-white
 }
 .about-info-value{
-    @apply pl-[12px] text-xs sm:text-base
+    @apply pl-[12px] text-xs sm:text-base dark:text-second-lighter
 }
 .box-shadow{
-    @apply shadow-2xl
+    @apply shadow-2xl border-[1px] dark:shadow-prime dark:shadow-lg dark:border-[#353f4e]
 }
 </style>

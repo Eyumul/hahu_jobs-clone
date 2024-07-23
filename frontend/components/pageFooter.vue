@@ -54,10 +54,10 @@
                     <p>© 2020 - 2024 HaHuJobs. All rights reserved.</p>
                 </div>
                 <div class="flex space-x-9 pt-4">
-                        <NuxtImg class="hover:size-[30px] duration-200 size-[25px]" src="telegram.svg"/>
-                        <NuxtImg class="hover:size-[30px] duration-200 size-[25px]" src="facebook-circular.svg"/>
-                        <NuxtImg class="hover:size-[30px] duration-200 size-[25px]" src="x.svg"/>
-                        <NuxtImg class="hover:size-[30px] duration-200 size-[25px]" src="linkedin_color.svg"/>
+                        <NuxtImg class="hover:scale-[110%] duration-200 size-[25px]" src="telegram.svg"/>
+                        <NuxtImg class="hover:scale-[110%] duration-200 size-[25px]" src="facebook-circular.svg"/>
+                        <NuxtImg class="hover:scale-[110%] duration-200 size-[25px]" src="x.svg"/>
+                        <NuxtImg class="hover:scale-[110%] duration-200 size-[25px]" src="linkedin_color.svg"/>
                 </div>
             </div>
         </div>

@@ -9,11 +9,11 @@
                         </div>
                     </NuxtLink>
                 <div class="hidden md:flex xl:space-x-10 md:space-x-4 xl:text-lg md:text-sm text-[#444f60] dark:text-prime-lighter items-end self-center">
-                    <NuxtLink to="./" class="hover:text-[#009688] hover:text-xl duration-500 cursor-pointer">Home</NuxtLink>
-                    <NuxtLink to="./#about" class="hover:text-[#009688] hover:text-xl duration-500 cursor-pointer">About</NuxtLink>
+                    <NuxtLink to="./" class="hover:text-[#009688] hover:scale-[110%] duration-500 cursor-pointer">Home</NuxtLink>
+                    <NuxtLink to="./#about" class="hover:text-[#009688] hover:scale-[110%] duration-500 cursor-pointer">About</NuxtLink>
                     <NuxtLink to="./jobs" class="text-[#009688] font-bold cursor-pointer">Jobs</NuxtLink>
-                    <NuxtLink to="./#postVacancy" class="hover:text-[#009688] hover:text-xl duration-500 cursor-pointer">Post Vacancy</NuxtLink>
-                    <NuxtLink class="hover:text-[#009688] hover:text-xl duration-500 cursor-pointer">Contact</NuxtLink>
+                    <NuxtLink to="./#postVacancy" class="hover:text-[#009688] hover:scale-[110%] duration-500 cursor-pointer">Post Vacancy</NuxtLink>
+                    <NuxtLink class="hover:text-[#009688] hover:scale-[110%] duration-500 cursor-pointer">Contact</NuxtLink>
                     <div class="mb-[1px]" @click="toggleColorMode">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="dark:hidden cursor-pointer hover:text-prime size-5 mb-[2px]">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
@@ -141,6 +141,7 @@ const menudrop = ref(false)
 const colorMode = useColorMode()
 if(import.meta.client){
     localStorage.removeItem('nuxt-color-mode');
+    colorMode.preference = localStorage.getItem("colorMode")
 }
 function toggleColorMode() {
     if(localStorage.getItem('colorMode') == 'light'){

@@ -62,7 +62,7 @@
                 </div>
             </div>
             <div id="about" class="flex flex-wrap items-center justify-center gap-16 mx-[10%] mt-[6rem]">
-                <NuxtImg class="2xl:order-last w-[600px] hover:w-[650px] duration-500" src="hahu_robot.svg"/>
+                <NuxtImg class="2xl:order-last w-[600px] hover:scale-[110%] duration-500" src="hahu_robot.svg"/>
                 <div class="flex flex-col w-[100%] 2xl:w-[50%] space-y-4">
                     <p class="font-black text-3xl sm:text-5xl xl:w-[600px] text-[#444f60] dark:text-white">What is unique about HaHuJobs</p>
                     <p class="font-semibold text-[#566a88] dark:text-prime-lighter text-sm sm:text-lg sm:leading-loose">HaHuJobs Primary services are deployments targeting the needs of the Ethiopian jobseeker, with both online and assisted models the platform is tool intended to assist the process of looking for a job at all levels of employment. It features vacancy aggregation and posting from various sources as well as enterprises, builds career profiles, apply for jobs, and subscribe to customized alerts for each user via a channel of their choice. HaHuJobs primary also offers standardized classification of all vacancies both sourced from HaHuJobs enterprise services and other manual and digital vacancy platforms.</p>
@@ -76,15 +76,15 @@
                         </bigButton>
                     </div>
                     <div class="flex space-x-9 pt-4">
-                        <NuxtImg class="hover:size-[30px] duration-200 size-[25px]" src="telegram.svg"/>
-                        <NuxtImg class="hover:size-[30px] duration-200 size-[25px]" src="facebook-circular.svg"/>
-                        <NuxtImg class="hover:size-[30px] duration-200 size-[25px]" src="x.svg"/>
-                        <NuxtImg class="hover:size-[30px] duration-200 size-[25px]" src="linkedin_color.svg"/>
+                        <NuxtImg class="hover:scale-[110%] duration-200 size-[25px]" src="telegram.svg"/>
+                        <NuxtImg class="hover:scale-[110%] duration-200 size-[25px]" src="facebook-circular.svg"/>
+                        <NuxtImg class="hover:scale-[110%] duration-200 size-[25px]" src="x.svg"/>
+                        <NuxtImg class="hover:scale-[110%] duration-200 size-[25px]" src="linkedin_color.svg"/>
                     </div>
                 </div>
             </div>
             <div class="flex flex-wrap justify-center gap-16 items-center mx-[10%] mt-[6rem]">
-                <NuxtImg class="w-[600px]  hover:w-[650px] duration-500" src="keyboard.svg"/>
+                <NuxtImg class="w-[600px]  hover:scale-[110%] duration-500" src="keyboard.svg"/>
                 <div class="flex flex-col w-[100%] 2xl:w-[50%] space-y-2">
                     <p class="font-black text-3xl sm:text-5xl xl:w-[600px] text-[#444f60] dark:text-white">Why choose us</p>
                     <p class="text-xl sm:text-3xl text-[#009688] pt-[12px] font-bold">Convenience</p>

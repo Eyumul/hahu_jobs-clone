@@ -142,7 +142,7 @@
                     <newsCard newsPoster="/new_year_gift_thumbnail_d2cv9c.jpg" name="New Features" date="10 September 2022" title="Our new year's gift, new features..." description="Happy Ethiopian New year!! Our development teams have worked hard to provide our users with new features to offer much-needed insights and automation."/>
                     <newsCard newsPoster="/scholarship_1_mftyda_g4jvkt.jpg" name="Scholarship" date="1 September 2022" title="KAS SUR-PLACE Scholarship..." description="The KAS sur-place scholarship is a local scholarship offered by the KAS Office Ethiopia/AU in the form of financial support to Ethiopians who are enrolled in and are pursuin"/>
                 </div>
-                <div class="flex justify-center">
+                <div class="flex justify-center font">
                     <bigButton buttonName="More blogs">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-5">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
@@ -159,6 +159,10 @@
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+p,div {
+    font-family: "Roboto", sans-serif;
+}
 .dots {
     @apply w-full h-[324px] bg-[url('../public/bg_dots.png')] dark:bg-[url('../public/bg_dots_dark.png')] bg-contain bg-no-repeat
 }

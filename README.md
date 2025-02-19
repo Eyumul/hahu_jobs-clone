@@ -2,7 +2,7 @@
 original site
 [hahu.jobs](https://hahu.jobs/)
 cloned site
-[hahu.jobs(clone)](https://hahujobsclonebyeyuel.netlify.app/)
+[hahu.jobs(clone)](https://hahu-jobs-clone.vercel.app/)
 ## To install and view this clone project
 <u>Requirements</u>
 - Git clone this frontend repo
